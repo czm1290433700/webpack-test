@@ -39,7 +39,20 @@ module.exports = {
             ? MiniCssExtractPlugin.loader
             : "style-loader",
           "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                // 添加 autoprefixer 插件
+                plugins: [require("autoprefixer")],
+              },
+            },
+          },
         ],
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
   },
