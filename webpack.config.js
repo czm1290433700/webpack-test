@@ -56,6 +56,10 @@ module.exports = {
           "sass-loader",
         ],
       },
+      {
+        test: /\.webp/,
+        type: "asset/resource",
+      },
     ],
   },
   plugins: [
