@@ -2,6 +2,8 @@ const path = require("path");
 const ESLintPlugin = require("eslint-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
+// const BundleAnalyzerPlugin =
+//   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = {
   entry: "./src/app.tsx",
@@ -79,6 +81,8 @@ module.exports = {
         </html>
       `,
     }),
+    // 性能优化分析
+    // new BundleAnalyzerPlugin(),
   ],
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
