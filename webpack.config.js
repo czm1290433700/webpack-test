@@ -87,4 +87,11 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
+  // 持久化缓存
+  cache: {
+    type: "filesystem",
+    buildDependencies: {
+      config: [path.join(__dirname, "webpack.config.js")],
+    },
+  },
 };
